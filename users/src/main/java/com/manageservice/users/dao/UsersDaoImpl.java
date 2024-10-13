@@ -47,7 +47,7 @@ public class UsersDaoImpl extends  BasicDao{
                 .user_email(resultSet.getString(COL_EMAIL)).user_phone_num(resultSet.getString(COL_PHONE))
                 .build();
         var user =  super.namedParameterJdbcTemplate.query(sql,namedParameters,rowMapper);
-        return user.get(0);
+        return (user.isEmpty())? new User() : user.get(0);
     }
 
 

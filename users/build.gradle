@@ -41,9 +41,7 @@ dependencies {
 	implementation group: 'mysql', name: 'mysql-connector-java', version: '8.0.26'
 	implementation group: 'com.zaxxer', name: 'HikariCP', version: '5.0.1'
 
-	implementation (group: 'org.springframework', name: 'spring-jdbc'){
-		exclude(group: 'org.apache.tomcat', module: 'tomcat-jdbc')
-	}
+
 	compileOnly 'org.projectlombok:lombok'
 	annotationProcessor 'org.projectlombok:lombok'
 	runtimeOnly 'mysql:mysql-connector-java'
