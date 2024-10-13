@@ -1,0 +1,14 @@
+spring:
+  application:
+    name: api-manage-users
+  datasource:
+    url: jdbc:mysql://localhost:3306/rkpersonal01
+    username: root
+    password: root1234
+    poolname: api-manage-users-dbpool
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    hikari:
+      connection-timeout: 50000
+      idle-timeout: 30000
+      maximum-pool-size: 5
+      minimum-idle: 2
